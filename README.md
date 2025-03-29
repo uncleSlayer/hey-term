@@ -1,6 +1,6 @@
-# Hey-Term
+# Whispy
 
-Hey-Term is a voice-activated terminal automation tool that allows users to execute commands using natural language. It utilizes Whisper for speech-to-text conversion and DeepSeek-R1:8B (via LangChain and Ollama) for natural language processing. A macOS Automator hotkey triggers the system, enabling seamless hands-free terminal interaction.
+Whispy is a voice-activated terminal automation tool that allows users to execute commands using natural language. It utilizes Whisper for speech-to-text conversion and DeepSeek-R1:8B (via LangChain and Ollama) for natural language processing. A macOS Automator hotkey triggers the system, enabling seamless hands-free terminal interaction.
 
 ## Features
 - **Voice Command Execution**: Speak commands, and they get executed in the terminal.
@@ -31,8 +31,8 @@ Hey-Term is a voice-activated terminal automation tool that allows users to exec
 ### Steps
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/hey-term.git
-   cd hey-term
+   git clone https://github.com/yourusername/Whispy.git
+   cd Whispy
    ```
 2. **Install dependencies:**
    ```bash
@@ -45,7 +45,7 @@ Hey-Term is a voice-activated terminal automation tool that allows users to exec
 4. **Configure macOS Automator:**
    - Open Automator and create a new "Quick Action."
    - Set it to "Receive no input" and select "Run Shell Script."
-   - Add the command to trigger the Hey-Term script.
+   - Add the command to trigger the Whispy script.
    - Save and assign a hotkey in macOS settings.
 
 ## Usage
