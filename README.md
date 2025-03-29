@@ -7,13 +7,13 @@ Whispy is a voice-activated terminal automation tool that allows users to execut
 - **Whisper Integration**: Converts spoken words into text.
 - **DeepSeek-R1:8B with LangChain**: Interprets the text and generates appropriate terminal commands.
 - **Mac Automator Hotkey**: Quick access via a user-configurable keyboard shortcut.
-- **PyAudio for Audio Capture**: Listens and records audio seamlessly.
+- **Sounddevice for Audio Capture**: Listens and records audio seamlessly.
 
 ## How It Works
 1. The user presses a configured hotkey.
-2. PyAudio records the audio input.
+2. Sounddevice records the audio input.
 3. The recorded audio is processed by Whisper to convert it into text.
-4. The transcribed text is sent to DeepSeek-R1:8B via LangChain.
+4. The transcribed text is sent to DeepSeek-R1:1.5B via LangChain.
 5. The AI model generates an appropriate terminal command.
 6. The generated command is executed in the macOS terminal.
 
@@ -21,11 +21,12 @@ Whispy is a voice-activated terminal automation tool that allows users to execut
 ### Prerequisites
 - macOS
 - Python 3.9+
+- [UV](https://docs.astral.sh/uv/)
 - [Whisper](https://github.com/openai/whisper)
 - [LangChain](https://python.langchain.com/)
 - [Ollama](https://ollama.ai/)
-- [DeepSeek-R1:8B](https://github.com/DeepSeek-AI)
-- PyAudio (`brew install portaudio && pip install pyaudio`)
+- [DeepSeek-R1:1.5B](https://github.com/DeepSeek-AI)
+- Sounddevice
 - macOS Automator (built-in)
 
 ### Steps
@@ -36,7 +37,7 @@ Whispy is a voice-activated terminal automation tool that allows users to execut
    ```
 2. **Install dependencies:**
    ```bash
-   pip install -r requirements.txt
+   uv run main.py
    ```
 3. **Set up Ollama and DeepSeek-R1:8B:**
    - Follow the [Ollama setup guide](https://ollama.ai/docs) to run DeepSeek locally.
